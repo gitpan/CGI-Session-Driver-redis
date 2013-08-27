@@ -9,7 +9,7 @@ use CGI::Session::Driver;
 @CGI::Session::Driver::redis::ISA = ("CGI::Session::Driver");
 
 use vars qw($VERSION);
-our $VERSION = "0.2";
+our $VERSION = "0.3";
 
 
 =pod
@@ -143,7 +143,7 @@ sub store
     my $expire = $self->{'Expire'} || 0;
     if ( $expire && $expire > 0 )
     {
-        $self->{ 'Redis' }->expire( "session:$sid", $expire );
+        $self->{ 'Redis' }->expire( $key, $expire );
     }
     return 1;
 }
