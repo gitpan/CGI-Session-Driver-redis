@@ -1,10 +1,10 @@
 --- #YAML:1.0
 name:               CGI-Session-Driver-redis
-version:            0.4
+version:            0.5
 abstract:           Persistent session data in CGI applications
 author:
     - Steve Kemp <steve@steve.org.uk>
-license:            unknown
+license:            perl
 distribution_type:  module
 configure_requires:
     ExtUtils::MakeMaker:  0
@@ -12,8 +12,7 @@ build_requires:
     ExtUtils::MakeMaker:  0
 requires:
     CGI::Session:  4
-    Redis:         ~
-    Test::More:    ~
+    Redis:         0
 resources:
     bugtracker:  https://github.com/skx/CGI--Session--Driver--redis/issues
     homepage:    https://github.com/skx/CGI--Session--Driver--redis/
